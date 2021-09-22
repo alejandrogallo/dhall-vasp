@@ -1,4 +1,8 @@
-let mk-atom = λ(el : Text) → λ(n : Natural) → { element = el, size = n }
+let mk-atom =
+      λ(el : Text) →
+      λ(n : Natural) →
+      λ(cs : List (List Double)) →
+        { element = el, size = n, coordinates = cs }
 
 in  { H = mk-atom "H"
     , He = mk-atom "He"
